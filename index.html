@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Integration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <section class="main wrapper">
+        <nav class="navbar navbar-expand-lg navbar-light text-light">
+            <button class="btn border mt-3 me-3" type="submit">
+                <div class="row justify-content-center">
+                    <div class="col-sm-6 col-md-6 col-lg-6 col-12 me-1 ">SWAP</div>
+                    <div class="col-sm-6 col-md-6 col-lg-1 col-12 me-1">
+                        <svg width="30" height="25" viewBox="0 0 30 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.65 10.7143L0 17.8571L6.65 25V19.6429H18.3333V16.0714H6.65V10.7143ZM30 7.14286L23.35 0V5.35714H11.6667V8.92857H23.35V14.2857L30 7.14286Z" fill="#71C7EC"/>
+                        </svg>
+                    </div>
+                </div>
+            <button class="btn border mt-3 me-3" type="submit" style="background-color:#71C7EC;" onclick="showBalance()">CONNECT</button>
+          </nav>
+    </section>
+    <section>
+          <!--Main Navigation-->
+            <!-- Sidebar -->
+              <div class="row ml-3">
+                <div class="col-md-3 col-lg-2 col-sm-4 sidebar main active">
+                    <div class="headings">Core</div>
+                    <a class="active">                        
+                        <span class="me-2">
+                            <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.375 14.9583H12.0417V0.375H0.375V14.9583ZM0.375 26.625H12.0417V17.875H0.375V26.625ZM14.9583 26.625H26.625V12.0417H14.9583V26.625ZM14.9583 0.375V9.125H26.625V0.375H14.9583Z" fill="#B4B4B4"/>
+                            </svg>                            
+                        </span>
+                        <span>Dashboard</span>
+                    </a>
+                    <a>
+                        <span class="me-2">                            
+                        <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <rect width="35" height="35" fill="url(#pattern0)"/>
+                            <defs>
+                            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_0_12" transform="scale(0.0416667)"/>
+                            </pattern>
+                            <image id="image0_0_12" width="24" height="24" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAArElEQVRIie1VwQ3CMAw8W2wBLJR6jsxE97DEQHQP90EQlZs2CkQqkbhfTo7tO8cK0DvIE6o6ABgBnCtzTcwcQwj3JcmZwNsHyQHgYmajJ0+5QAAQkZW6PaiqmdnV8zkFTdF/gdwMADw9bVHgWItEhJavqXSuLtACuU3+ynuv6D+DIvqfweYmA+9uXqq2/N5TfYiCCelP8J2V5kNED8+tFDBzTEWqkJLH2nu/jxnjCzpYTUuORQAAAABJRU5ErkJggg=="/>
+                            </defs>
+                        </svg>    
+                        </span>
+                        <span>Calculator</span>
+                    </a>
+                    <a>
+                        <span class="me-2">
+                            <svg width="30" height="25" viewBox="0 0 30 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.65 10.7143L0 17.8571L6.65 25V19.6429H18.3333V16.0714H6.65V10.7143ZM30 7.14286L23.35 0V5.35714H11.6667V8.92857H23.35V14.2857L30 7.14286Z" fill="#B4B4B4"/>
+                            </svg>
+                        </span>
+                        <span>Swap</span>
+                    </a>
+                    <a>
+                        <span class="me-2">                            
+                        <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_0_13)">
+                            <path d="M14.5833 26.25H20.4167V23.3333H14.5833V26.25ZM4.375 8.75V11.6667H30.625V8.75H4.375ZM8.75 18.9583H26.25V16.0417H8.75V18.9583Z" fill="#B4B4B4"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_0_13">
+                            <rect width="35" height="35" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                        </span>
+                        <span>To Do List</span>
+                        </a>
+                        <a>
+                            <span class="me-2">  
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="35" viewBox="0 0 35 35" fill="none">
+                                    <rect width="35" height="35" fill="url(#pattern1)"/>
+                                    <defs>
+                                    <pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                    <use xlink:href="#image0_0_16" transform="scale(0.0416667)"/>
+                                    </pattern>
+                                    <image id="image0_0_16" width="24" height="24" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAACQklEQVRIidWVMW/TUBSFz7VDpTyhCqYqKCwoGwuizgC/IIptpRElrExsDAgFVWLJgISa/ADUgZHFAiWuHRD8BWIkJoRoWYogEwNSEokkHAackDhOnI69k/3eeee79/rpGjjrIas2HcfZSKfTZREpkbwuIlkAIPlNRD6ISKvX67UqlcrvUwPa7fYtknUAVxKSPCZZtW27uRbAcRxdKbUP4GGC8VyQbARBsFer1f7MrmtRYZy5iJyIyO54PN4cj8ebJMskP0c01Xw+/3RlBWFbXkbNdV2/VigUfs6u+75/UUQ+krwcqaRs23ZrAeA4zoZS6hMiPReRXdM0X3meVxSRAwDQNO1esVh84/v+bQBOJOmjfr9/dfLhpy1Kp9PlqDkAjEajdyHoAEAWQJbkBPQ2qgeQU0qVJi9TgIiUYsTQdf2X7/sMzediOByejzsDYBEAYHuJOBojAPcBIJVK3YkTkDTiAJl13EneNU3T9TzvBskncRoRuRQHWCee27b9wnXdnIi8BqCSDswCfiSJRaQOALquPwNwYZmO5PcFAMlOEqDX6x2HjzcTEnm/ANA0zU0CKKVG4Y1a2RqSU68pYGtrqwngKAmyRnwdDAaHCwDDMIYkH606aVmWWJa1asQTwIPZ8T13i2zbbpJsnD7p0J3ctyzrcHYtFRUFQbCXz+cZV03Y/1hvAPUgCB5HN5aW63nejog0AOQSEv8iIlXTNGMvycpfZqfTOdftdnfwb7Zs4/88OgEQkHQzmYxrGMYwIYkzHH8BPmHdxVy8sbUAAAAASUVORK5CYII="/>
+                                    </defs>
+                                </svg>    
+                            </span>
+                            <span>FAQ</span>
+                            </a>
+
+                    <div class="headings">Links</div>
+                    <a>
+                        <span class="me-2">                            
+                        <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <rect width="35" height="35" fill="url(#pattern2)"/>
+                            <defs>
+                            <pattern id="pattern2" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_0_21" transform="scale(0.0416667)"/>
+                            </pattern>
+                            <image id="image0_0_21" width="24" height="24" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAlklEQVRIie2R0Q3DIAxE76yOkS6EPAc7ZQ6QOlCzh/uFRJAgEW770eb92dh3hwxcHMC6SCkFkiuAZVJvE5EYQniUhuzcfOIAsJjZWjekHXCIAwDM7D4yeDunDFSVqspe7TbwsEuRc7a6PptytPfxH9xGjyVZSdSrR1w3OOTHbzDLV2/QGmxeQZLProGIxHZgQjzO7v8pLylhP/cLzZYDAAAAAElFTkSuQmCC"/>
+                            </defs>
+                        </svg>    
+                        </span>
+                        <span>Social</span>
+                    </a>
+                    <a>
+                        <span class="me-2">                            
+                        <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <rect width="35" height="35" fill="url(#pattern3)"/>
+                            <defs>
+                            <pattern id="pattern3" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_0_17" transform="scale(0.0416667)"/>
+                            </pattern>
+                            <image id="image0_0_17" width="24" height="24" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAACh0lEQVRIid2UPUwUURSFvzsLIRAaO1YNGkOIGhILp7DQxp+YuDMBmzHBHqWHQIjRoREMsTMqWNlY0Mj6hhZItNuhskRiAWGhZxKCYa4FM+vsD7tY6qne3HvfOee+O+/Bvw5pllxdXW2Loug+8BgYAHqBNlXdBtYtyypGUbTked7hXwsEQXAX+ABcbGFyU1XHXdf93CiZaxQ0xsyIyDxwpgX5d+CyiDwaHh7u7O/vX1lbW9NsgdXA+bSITNLi+ERkq1AoXFPVUeAAmLBt+2VtXZWAMcYFnrdwjYhsASMioq7rvgcepCLGmKGq2nQRhmH77u7uBnDhJGLHcZrNbBR4C/zo6em5atv2r6oO9vb2HjYjb4UwDOc5nklfuVweTOMVgTiOBxttzOBrs6Tv+7GqLgCISOWY2tKFiNwAUNVPIjKc3dzsaLLI5XIrcRyjqnZdB0BPUjQKTJ6GsBb7+/s/E7Pn6joAjpKi2PO8V8aYThF5ARAEQdW/neCb4zi3soGOjo6Ur1Kf7aAM0N3d3Qvguq6vqtNNDN+sDYhIL4Cq7tQJqGoIcHR0dDuNnUKkCpZl3UuESnUClmUVk+QT3/crcdd1/dOQLy4u5oCRxGwxjVdmEEXRUldX1yYwYNv2U44vTYpt4HwtaTKbnYT4EnAF2Mjn8xWBilPP8w5VdTz5fG2MuZPpbiQRaYSzwEdgjuPhjqW3GBo8aEEQzAITwIGIjJVKpXe+78cZxydCRGYKhcJUNtZWWxSG4ZRt2wATqvrGtu3R5eXlBWBV9UR+FZHZUqn0rE70pB3GmCERmQP6mrkGNoAxx3G+NEo2fQLCMGwvl8uDydtynT+D3gLWVbWYz+eL2TP///AbJk3vb7fL3fgAAAAASUVORK5CYII="/>
+                            </defs>
+                        </svg>    
+                        </span>
+                        <span>Website</span>
+                    </a>
+                    <a>
+                        <span class="me-2">                        
+                            <svg width="29" height="27" viewBox="0 0 29 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M26.625 22.25V23.7083C26.625 25.3125 25.3125 26.625 23.7083 26.625H3.29167C1.67292 26.625 0.375 25.3125 0.375 23.7083V3.29167C0.375 1.6875 1.67292 0.375 3.29167 0.375H23.7083C25.3125 0.375 26.625 1.6875 26.625 3.29167V4.75H13.5C11.8813 4.75 10.5833 6.0625 10.5833 7.66667V19.3333C10.5833 20.9375 11.8813 22.25 13.5 22.25H26.625ZM13.5 19.3333H28.0833V7.66667H13.5V19.3333ZM19.3333 15.6875C18.1229 15.6875 17.1458 14.7104 17.1458 13.5C17.1458 12.2896 18.1229 11.3125 19.3333 11.3125C20.5438 11.3125 21.5208 12.2896 21.5208 13.5C21.5208 14.7104 20.5438 15.6875 19.3333 15.6875Z" fill="#B4B4B4"/>
+                            </svg>    
+                        </span>
+                        <span>Buy Now</span>
+                    </a>
+                </div>
+                <div class="col-md-9 col-lg-10 col-sm-8" style="background-color: black;">
+                    <div class="row btn btn-lg- border mt-5 me-5 ms-5" onclick="showBalance()">
+                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 ms-5 wallet">Wallet Address -</div>
+                        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-8"><input type="search" class="form-control rounded input" id="address" name="wallet" placeholder="0x833aBBF9904E9A3Fe194f7c433F633" aria-label="Search" /></div>
+                    </div>
+                    <!-- <button onclick="showBalance()" class="btn btn-lg border mt-5 me-5 ms-5">
+                         <span class="wallet">Wallet Address - </span><input type="search" class="form-control rounded input" id="address" name="wallet" placeholder="0x833aBBF9904E9A3Fe194f7c433F633" aria-label="Search" />
+                    </button> -->
+                <div class="container border border-primary mt-5 ml-5">
+                    <div class="row text-center">
+                        <div class="col-md-4"><span class="key">My Total Taken</span><br><span class="values">34234 TKN</span></div>
+                        <div class="col-md-4"><span class="key">Total Taken Values</span><br><span class="values">354343$</span></div>
+                        <div class="col-md-4"><span class="key">Total Burned</span><br><span class="values">3234 TKN</span></div>
+                    </div>
+                    <br><br>
+                    <div class="row text-center">
+                        <div class="col-md-4"><span class="key">Total Supply</span><br><span class="values">10000000</span></div>
+                        <div class="col-md-4"><span class="key">Market Volume (USD)</span><br><span class="values">54658</span></div>
+                        <div class="col-md-4"><span class="key">Current Price</span><br><span class="values">$0.005454</span></div>
+                    </div>
+                </div>
+              </div>
+              </div>
+              
+     </section>
+     <script src="index.js" type="text/javascript"></script>
+     <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+</body>
+</html>
